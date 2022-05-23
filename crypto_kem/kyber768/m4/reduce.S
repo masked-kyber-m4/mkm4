@@ -148,7 +148,7 @@ asm_barrett_reduce32:
 		
 	push    {r2-r3 ,r14}
 	// const int16_t v = ((1U << 26) + KYBER_Q / 2) / KYBER_Q;
-	mov r1, #0x4EBF
+	movw r1, #0x4EBF
 
 	// (int64_t)v * a
 	smull r2, r3, r0, r1
@@ -165,7 +165,7 @@ asm_barrett_reduce32:
 	sub r2, r2, #1
 
 	// ((((int64_t)v * a + (1 << 25)) >> 26) - 1)*KYBER_Q
-	mov r3, #0xD01
+	movw r3, #0xD01
 	mul r2, r2, r3
 
 	// return a - ((((int64_t)v * a + (1 << 25)) >> 26) - 1)*KYBER_Q;
