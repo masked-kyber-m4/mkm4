@@ -70,7 +70,7 @@ void masked_poly_mask(masked_poly *dest, const poly *src)
 			int16_t tmp;
 			do {
 				tmp = (random_buf[random_buf_idx++] & 0x0FFF) - 0x0800;
-			} while (temp > KYBER_Q / 2 || temp < -KYBER_Q / 2);
+			} while (tmp > KYBER_Q / 2 || tmp < -KYBER_Q / 2);
             dest->polys[mask_idx].coeffs[idx] = tmp;
             acc += tmp;
         }
