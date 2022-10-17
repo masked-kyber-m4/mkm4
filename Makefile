@@ -1,4 +1,4 @@
-OPENCM3DIR  = ../libopencm3
+OPENCM3DIR  = libopencm3
 OPENCM3NAME = opencm3_stm32f4
 OPENCM3FILE = $(OPENCM3DIR)/lib/lib$(OPENCM3NAME).a
 LDSCRIPT    = ldscripts/stm32f405x6.ld
