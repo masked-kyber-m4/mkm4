@@ -98,7 +98,7 @@ typedef struct {
 typedef struct {
     masked_polyvec indcpa_sk;
     uint8_t pk[KYBER_INDCPA_PUBLICKEYBYTES];
-    uint8_t hpk[KYBER_PUBLICKEYBYTES];
+    uint8_t hpk[KYBER_SYMBYTES];
     masked_u8_symbytes z;
 } masked_sk;
 
