@@ -139,6 +139,7 @@ int main(void)
   hal_send_str(buf);
   snprintf(buf, sizeof(buf), "decaps: avg %.2f, stdev %.2f [cc]", decaps_avg, decaps_stdev);
   hal_send_str(buf);
+#ifdef DETAILBENCHMARK
   hal_send_str("==========================");
   snprintf(buf, sizeof(buf), "indcpadec: avg %lld", details[0].indcpadec);
   hal_send_str(buf);
@@ -168,6 +169,7 @@ int main(void)
   hal_send_str(buf);
   snprintf(buf, sizeof(buf), "kdf: avg %lld", details[0].kdf);
   hal_send_str(buf);
+#endif /* DETAILBENCHMARK */
 
   if (ok_keys) {
     hal_send_str("OK KEYS\n");
